@@ -2,14 +2,14 @@ package gov.E2EIdentity.app.Support;
 
 import gov.E2EIdentity.app.Browsers.BrowserFactory;
 import gov.E2EIdentity.app.Pages.BasePage;
-import gov.E2EIdentity.app.Pages.HomePage;
+import gov.E2EIdentity.app.Pages.CarTaxCheckPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class WorldHelper {
     private WebDriver driver = BrowserFactory.getDriver();
     private static BasePage basePage = null;
-    private static HomePage landingPage = null;
+    private static CarTaxCheckPage landingPage = null;
 
 
 
@@ -18,9 +18,9 @@ public class WorldHelper {
         return PageFactory.initElements(driver, BasePage.class);
     }
 
-    public  HomePage getLandingPage(){
+    public CarTaxCheckPage getLandingPage(){
         if(landingPage != null) return landingPage;
-        return PageFactory.initElements(driver, HomePage.class);
+        return PageFactory.initElements(driver, CarTaxCheckPage.class);
     }
 
 }

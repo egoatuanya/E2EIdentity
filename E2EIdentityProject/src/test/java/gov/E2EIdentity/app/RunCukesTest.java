@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
             features = {"src/test/resources"},
             snippets = SnippetType.CAMELCASE,
             glue = {"gov.E2EIdentity.app"},
-            tags = {"@regression"}
+            tags = {}
 
 
     )

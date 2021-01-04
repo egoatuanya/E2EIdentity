@@ -15,8 +15,8 @@ public class BasePage {
     public BasePage(WebDriver webDriver) {
         this.driver = webDriver;
     }
-    //Navigate to the wikipedia homepage
-    public HomePage goToHomePage() {
+    //Navigate to the car tax check  homepage
+    public CarTaxCheckPage goToHomePage() {
         String baseUrl = Settings.getTestConfig("base.url");
         driver.navigate().to(baseUrl);
         long timeout = Long.parseLong(Settings.getTestConfig("browser.time"));
@@ -25,7 +25,7 @@ public class BasePage {
         driver.manage().window().maximize();
         driver.navigate().refresh();
 
-        return PageFactory.initElements(driver, HomePage.class);
+        return PageFactory.initElements(driver, CarTaxCheckPage.class);
     }
 
 }
